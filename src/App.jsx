@@ -89,6 +89,22 @@ function App() {
 
   return (
     <>
+    <div className="App">
+      <header><h1>Task Manager</h1></header>
+      <div className="container">
+        <h2>Current Tasks ({inProgressTask.length})</h2>
+        <ul>
+          {inProgressTask.map(task =>(
+            <li key={task.id} className='item-task'>
+              <strong>{task.title}</strong> <br />
+              Priority: {task.priority} <br />
+              Est. Time: {task.estimatedTime}
+              
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
     </>
   )
 }
