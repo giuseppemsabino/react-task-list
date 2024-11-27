@@ -18,3 +18,10 @@ li {
 .container {
   margin: 10px;
 }
+
+.state-tag{
+  background-color: #d3691d;
+  padding: 10px;
+  color: white;
+  font-weight: bolder;
+}
