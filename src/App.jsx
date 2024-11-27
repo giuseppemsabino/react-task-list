@@ -95,11 +95,23 @@ function App() {
         <h2>Current Tasks ({inProgressTask.length})</h2>
         <ul>
           {inProgressTask.map(task =>(
-            <li key={task.id} className='item-task'>
+            <li key={task.id} className='item-task-incomplete'>
               <strong>{task.title}</strong> <br />
               Priority: {task.priority} <br />
               Est. Time: {task.estimatedTime}
               
+            </li>
+          ))}
+        </ul>
+        <hr />
+        
+        <h2>Completed Task ({completeTask.length})</h2>
+        <ul>
+          {completeTask.map(task => (
+            <li key={task.id} className='item-task-complete'>
+              <strong>{task.title}</strong><br />
+              Priority: {task.priority} <br />
+              Est. Time: {task.estimatedTime}
             </li>
           ))}
         </ul>
